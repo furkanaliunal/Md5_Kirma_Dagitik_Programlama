@@ -1,6 +1,7 @@
 # Bilg.Sist.Lab Dersi | Deney: Java ile Dağıtık Programlama |
 
 Bu ödevde katkıda bulunanlar:
+    
     - Rumeysa Hançer | 16260003
     - Havza Nur Ümütlü | 170260073
     - Furkan Ali Ünal | 15260038
