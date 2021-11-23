@@ -10,8 +10,9 @@ public class ServerMain {
     public static void main (String[] args){
         Scanner input = new Scanner(System.in);
         System.out.print("Kullanilacak portu girin (Ornek: 25565): ");
-        int port = input.nextInt();
-        new Server(port);
+        int port = Integer.parseInt(input.nextLine());
+        System.out.print("Kirilacak 32 karakterden olusan MD5 sifreyi girin: ");
+        new Server(port, input.nextLine());
     }
 }
 
@@ -19,12 +20,13 @@ class Server {
     private ServerSocket server;
     private int port;
     //private String hash = "97dfc43fcf0a4b152a93c2aeb5da0986";//9994445
-    private String hash = "f841c5ebc50899712f64083c4949cd01";//1999444544 sayisi
+    private String hash;// = "f841c5ebc50899712f64083c4949cd01";//1999444544 sayisi
     private int artis = 100000000;
 
-    public Server(int port){
+    public Server(int port, String hash){
         try{
             this.port = port;
+            this.hash = hash;
             server = new ServerSocket(port);
             for(long baslangic = 0, hedef = artis; hedef < Long.MAX_VALUE; baslangic += artis, hedef += artis){
                 new ServerThread(server.accept(), baslangic, hedef, hash).start();
