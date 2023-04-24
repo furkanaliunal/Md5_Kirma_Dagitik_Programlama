@@ -2,8 +2,6 @@
 
 Bu ödevde katkıda bulunanlar:
     
-    - Rumeysa Hançer | 16260003
-    - Ravza Nur Ümütlü | 170260073
     - Furkan Ali Ünal | 15260038
 
 Uygulama nasıl çalıştırılır?
